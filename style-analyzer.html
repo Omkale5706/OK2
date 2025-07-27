@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OK Fashion - AI Style Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="analyzer-styles.css">
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">OK Fashion</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <!-- <li><a href="#analyzer">Style Analyzer</a></li> -->
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                </ul>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="index.html" class="mobile-menu-link">Home</a>
+                <a href="#analyzer" class="mobile-menu-link">Style Analyzer</a>
+                <a href="index.html#about" class="mobile-menu-link">About</a>
+                <a href="index.html#services" class="mobile-menu-link">Services</a>
+            </div>
+        </div>
+
+        <header class="header">
+            <h1>AI Style Analyzer</h1>
+            <p>Upload your photo and let our advanced AI create personalized fashion recommendations just for you</p>
+        </header>
+
+        <main class="main-content">
+            <section class="upload-section slide-in-left">
+                <h2 class="section-title">Upload Your Photo</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Click to upload or drag and drop</div>
+                    <div class="upload-subtext">Supports JPG, PNG, WebP (Max 10MB)</div>
+                    <input type="file" id="imageInput" accept="image/*">
+                </div>
+                <img id="uploadedImage" class="uploaded-image" style="display: none;">
+                <button class="analyze-btn" id="analyzeBtn" disabled>
+                    ✨ Generate Style Suggestions
+                </button>
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p class="loading-text">Analyzing your style... Our AI is working its magic! ✨</p>
+                </div>
+            </section>
+
+            <section class="results-section slide-in-right">
+                <h2 class="section-title">Style Suggestions</h2>
+                <div id="results">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">👗</div>
+                        <div class="empty-state-text">No suggestions yet</div>
+                        <div class="empty-state-subtext">Upload a photo to get personalized styling recommendations</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="analyzer-script.js"></script>
+</body>
+</html>
